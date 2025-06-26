@@ -24,12 +24,12 @@ function useLocalStorage(key, initialValue) {
 
 function RegistrationFlow({ onRegistrationSuccess }) {
   const [formData, setFormData] = useState({
-    name: 'Ram Krishna',
-    email: 'ramkrishna@abc.edu',
-    rollNo: 'aa1bb',
-    mobileNo: '9999999999',
-    githubUsername: 'github',
-    accessCode: '',
+    name: 'Patchipala Srinivas',
+    email: '22a91a6143@aec.edu.in',
+    rollNo: '22A91A6143',
+    mobileNo: '7901014143',
+    githubUsername: 'srinivasaiml',
+    accessCode: 'NFwgRT',
   });
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
