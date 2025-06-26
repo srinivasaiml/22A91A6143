@@ -1,0 +1,227 @@
+:root {
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+  --color-background: #f4f7f9;
+  --color-surface: #ffffff;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-border: #e0e0e0;
+  --color-success: #28a745;
+  --color-error: #dc3545;
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+}
+
+.registration-card {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+
+.registration-card p {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.form__group {
+  margin-bottom: 1rem;
+}
+
+.form__group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form__group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form__group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.form__group-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form__group-row .form__group {
+  flex-grow: 1;
+}
+
+.form__group-row span {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.button:disabled {
+  background-color: #a0c3e6;
+  cursor: not-allowed;
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  width: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.button--secondary:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  color: var(--color-text);
+}
+
+.message {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.message--success {
+  background-color: #e9f7ec;
+  color: var(--color-success);
+}
+
+.message--error {
+  background-color: #fbebee;
+  color: var(--color-error);
+  margin-top: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+thead th {
+  font-weight: 600;
+  background-color: #f9fafb;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+td a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.cell--long-text {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-center {
+  text-align: center;
+  color: var(--color-text-light);
+  padding: 2rem;
+}
